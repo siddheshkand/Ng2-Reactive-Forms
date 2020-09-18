@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
       lastName: ["", [Validators.required, Validators.minLength(4)]],
       rating: [0, [Validators.required, rangeValidator2(1, 10)]],
       emailGroup: this.fb.group({
-        email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+')]],
+        email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+')],],
         confirmEmail: ['', Validators.required]
       }, {validators: emailMatcher}),
       dateGroup: this.fb.group({
